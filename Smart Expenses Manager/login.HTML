@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login - Expense Manager</title>
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+
+  <div class="auth-container">
+
+    <!-- Login Form -->
+    <div class="auth-box" id="loginBox">
+      <h2>Welcome Back</h2>
+      <p class="subtitle">Login to your account</p>
+      <input type="email" id="loginEmail" placeholder="Email address" />
+      <input type="password" id="loginPassword" placeholder="Password" />
+      <button id="loginBtn">Login</button>
+      <p id="loginError" style="color:red; font-size:13px; margin-top:8px;"></p>
+      <p class="switch-text">
+        Don't have an account?
+        <span onclick="showSignup()">Sign Up</span>
+      </p>
+    </div>
+
+    <!-- Signup Form -->
+    <div class="auth-box" id="signupBox" style="display:none;">
+      <h2>Create Account</h2>
+      <p class="subtitle">Sign up to get started</p>
+      <input type="text" id="signupName" placeholder="Full name" />
+      <input type="email" id="signupEmail" placeholder="Email address" />
+      <input type="password" id="signupPassword" placeholder="Password" />
+      <button id="signupBtn">Sign Up</button>
+      <p id="signupError" style="color:red; font-size:13px; margin-top:8px;"></p>
+      <p class="switch-text">
+        Already have an account?
+        <span onclick="showLogin()">Login</span>
+      </p>
+    </div>
+
+  </div>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+    import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyBoKjM0VOfRU7O_qCHGgOVXVwJxq0DQtvY",
+      authDomain: "personal-task-manager-4e017.firebaseapp.com",
+      projectId: "personal-task-manager-4e017",
+      storageBucket: "personal-task-manager-4e017.firebasestorage.app",
+      messagingSenderId: "875733171949",
+      appId: "1:875733171949:web:0eda6cb86b650cbe8116e4"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    document.getElementById("signupBtn").addEventListener("click", async () => {
+      const email = document.getElementById("signupEmail").value;
+      const password = document.getElementById("signupPassword").value;
+      try {
+        await createUserWithEmailAndPassword(auth, email, password);
+        window.location.href = "index.html";
+      } catch (error) {
+        document.getElementById("signupError").textContent = error.message;
+      }
+    });
+
+    document.getElementById("loginBtn").addEventListener("click", async () => {
+      const email = document.getElementById("loginEmail").value;
+      const password = document.getElementById("loginPassword").value;
+      try {
+        await signInWithEmailAndPassword(auth, email, password);
+        window.location.href = "index.html";
+      } catch (error) {
+        document.getElementById("loginError").textContent = error.message;
+      }
+    });
+
+    window.showSignup = () => {
+      document.getElementById("loginBox").style.display = "none";
+      document.getElementById("signupBox").style.display = "block";
+    };
+    window.showLogin = () => {
+      document.getElementById("signupBox").style.display = "none";
+      document.getElementById("loginBox").style.display = "block";
+    };
+  </script>
+
+</body>
+</html>

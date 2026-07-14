@@ -1,0 +1,211 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f4f4f4;
+  padding: 30px;
+}
+
+.container {
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1f4e79;
+  color: white;
+  padding: 16px 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 20px;
+}
+
+#logoutBtn {
+  background: rgba(255,255,255,0.2);
+  color: white;
+  border: 1px solid white;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+#logoutBtn:hover {
+  background: rgba(255,255,255,0.3);
+}
+
+/* Summary Cards */
+.summary-cards {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.card {
+  flex: 1;
+  background: #fff;
+  border-radius: 10px;
+  padding: 14px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+.card-label {
+  font-size: 11px;
+  color: #888;
+  margin-bottom: 6px;
+}
+
+.card-amount {
+  font-size: 18px;
+  font-weight: bold;
+  color: #1f4e79;
+}
+
+/* Add Expense Box */
+.add-expense-box {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+.add-expense-box h3 {
+  font-size: 15px;
+  margin-bottom: 12px;
+  color: #1f4e79;
+}
+
+.add-expense-box input,
+.add-expense-box select {
+  width: 100%;
+  padding: 9px 12px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.expense-options {
+  display: flex;
+  gap: 10px;
+}
+
+.expense-options select,
+.expense-options input {
+  flex: 1;
+}
+
+#addExpenseBtn {
+  width: 100%;
+  padding: 10px;
+  background: #1f4e79;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 4px;
+}
+
+#addExpenseBtn:hover {
+  background: #163a5a;
+}
+
+/* Filter Box */
+.filter-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.filter-box select {
+  flex: 1;
+  padding: 9px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  background: #fff;
+}
+
+/* Expense List */
+#expenseList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.expense-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+.expense-emoji {
+  font-size: 24px;
+}
+
+.expense-info {
+  flex: 1;
+}
+
+.expense-title {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.expense-meta {
+  font-size: 12px;
+  color: #888;
+  margin-top: 2px;
+}
+
+.expense-amount {
+  font-size: 16px;
+  font-weight: bold;
+  color: #e74c3c;
+}
+
+.expense-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.edit-btn, .delete-btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 4px;
+}
+
+.edit-btn { color: #1f4e79; }
+.delete-btn { color: #e74c3c; }
+
+.edit-btn:hover { color: #163a5a; }
+.delete-btn:hover { color: #c0392b; }
+
+/* Category Colors */
+.cat-Food { background: #fff3e0; }
+.cat-Transport { background: #e8f5e9; }
+.cat-Shopping { background: #fce4ec; }
+.cat-Entertainment { background: #f3e5f5; }
+.cat-Health { background: #e3f2fd; }
+.cat-Education { background: #e8eaf6; }
+.cat-Other { background: #f5f5f5; }
