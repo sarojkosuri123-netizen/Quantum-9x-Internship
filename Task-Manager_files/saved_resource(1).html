@@ -1,0 +1,124 @@
+
+<!-- saved from url=(0011)about:blank -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style id="fastsolve-styles">
+    @keyframes fastsolve-spin {
+      to { transform: rotate(360deg); }
+    }
+    @keyframes fastsolve-pulse {
+      0%, 100% { opacity: 0.4; }
+      50% { opacity: 1; }
+    }
+    @keyframes fastsolve-slideUp {
+      from { opacity: 0; transform: translateY(24px) scale(0.96); }
+      to   { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    @keyframes fastsolve-slideDown {
+      from { opacity: 1; transform: translateY(0) scale(1); }
+      to   { opacity: 0; transform: translateY(12px) scale(0.97); }
+    }
+    @keyframes fastsolve-barFill {
+      from { width: 0%; }
+    }
+    @keyframes fastsolve-shimmer {
+      0%   { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+    @keyframes fastsolve-iconPop {
+      0%   { transform: scale(0); opacity: 0; }
+      50%  { transform: scale(1.3); opacity: 1; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    @keyframes fastsolve-glow-success {
+      0%   { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.25); }
+      20%  { box-shadow: 0 0 8px 1px rgba(34, 197, 94, 0.18); }
+      100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+    }
+    @keyframes fastsolve-success-sweep {
+      0%   { transform: translateX(-100%); }
+      100% { transform: translateX(200%); }
+    }
+    @keyframes fastsolve-success-border {
+      0%   { opacity: 0; }
+      20%  { opacity: 1; }
+      75%  { opacity: 1; }
+      100% { opacity: 0; }
+    }
+
+    @keyframes fastsolve-glow-error {
+      0%   { box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.4); }
+      100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+    }
+    @keyframes fastsolve-spinnerGrow {
+      from { opacity: 0; transform: scale(0.6); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+    @keyframes fastsolve-textReveal {
+      from { opacity: 0; transform: translateY(4px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .fastsolve-highlight-success {
+      position: relative;
+      animation: fastsolve-glow-success 1.8s ease-out forwards;
+      border-radius: 4px;
+    }
+    .fastsolve-highlight-success::before {
+      content: '';
+      position: absolute;
+      inset: -1px;
+      border-radius: 5px;
+      border: 1.5px solid rgba(34, 197, 94, 0.35);
+      animation: fastsolve-success-border 1.8s ease-out forwards;
+      pointer-events: none;
+    }
+    .fastsolve-highlight-success::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 4px;
+      background: linear-gradient(
+        100deg,
+        transparent 40%,
+        rgba(34, 197, 94, 0.07) 48%,
+        rgba(34, 197, 94, 0.1) 50%,
+        rgba(34, 197, 94, 0.07) 52%,
+        transparent 60%
+      );
+      animation: fastsolve-success-sweep 0.9s ease-in-out 0.1s forwards;
+      pointer-events: none;
+    }
+    .fastsolve-highlight-error {
+      animation: fastsolve-glow-error 1.5s ease-out forwards;
+      outline: 2px solid rgba(239, 68, 68, 0.6);
+      outline-offset: 2px;
+      border-radius: 4px;
+    }
+    .fastsolve-toast {
+      animation: fastsolve-slideUp 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    .fastsolve-toast-exit {
+      animation: fastsolve-slideDown 0.35s cubic-bezier(0.4, 0, 1, 1) forwards;
+    }
+    .fastsolve-toast .fastsolve-confidence-bar-inner {
+      animation: fastsolve-barFill 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+    }
+    .fastsolve-toast .fastsolve-confidence-bar-shimmer {
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent);
+      background-size: 200% 100%;
+      animation: fastsolve-shimmer 2s ease-in-out infinite 1s;
+    }
+    .fastsolve-toast .fastsolve-icon {
+      animation: fastsolve-iconPop 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
+    }
+    .fastsolve-toast .fastsolve-message {
+      animation: fastsolve-textReveal 0.4s ease-out 0.25s both;
+    }
+    .fastsolve-loading-overlay {
+      animation: fastsolve-spinnerGrow 0.3s ease-out;
+    }
+    .fastsolve-sneaky-loading {
+      cursor: progress !important;
+    }
+    .fastsolve-sneaky-loading * {
+      cursor: progress !important;
+    }
+  </style><script>window.__CF$cv$params={r:'a1449aa049873a39',t:'MTc4MjkwMDQ0OQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);</script><script src="https://a.claude.ai/cdn-cgi/challenge-platform/scripts/jsd/main.js"></script></head><body></body></html>
